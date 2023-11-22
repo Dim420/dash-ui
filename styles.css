@@ -1,0 +1,272 @@
+:root {
+  --gray-200: #f4f6f8;
+  --gray-600: #475569;
+  --gray-800: #212b36;
+  --gray-900: #161c24;
+  --theme-colors-primary: #624bff;
+  --theme-colors-white: #fff;
+}
+
+/* CSS resets */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--gray-200);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+svg {
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar-dark {
+  background-color: var(--gray-800);
+  width: 256px;
+}
+
+main {
+  flex: 1;
+}
+
+.navbar-top {
+  display: flex;
+  background-color: var(--theme-colors-white);
+  box-shadow: 0px 1px 2px 0px rgba(21, 30, 40, 0.08),
+    0px 2px 4px 0px rgba(13, 23, 33, 0.08);
+  padding: 12px 32px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.avatar-md {
+  border: 2px solid rgba(233, 236, 239, 0.4);
+  border-radius: 40px;
+  height: 40px;
+  width: 40px;
+}
+
+.container {
+  padding: 32px;
+}
+
+#overview {
+  color: var(--gray-900);
+  font-size: 24px;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+
+.profile {
+  background-color: var(--theme-colors-white);
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px rgba(21, 30, 40, 0.08),
+    0px 2px 4px 0px rgba(13, 23, 33, 0.08);
+}
+
+.profile-tabs {
+  border-top: 1px solid var(--gray-200, #e2e8f0);
+  padding-inline: 20px;
+}
+
+.profile-tabs ul {
+  display: flex;
+}
+
+.profile-tabs ul li {
+  margin-inline: 16px;
+}
+
+.profile-tabs ul li a {
+  border-top: 2px solid transparent;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  padding-block: 16px;
+}
+
+.profile-tabs ul li a:hover,
+.profile-tabs ul li a.active {
+  border-top: 2px solid var(--theme-colors-primary);
+  color: var(--theme-colors-primary);
+}
+
+.profile-cover {
+  background-image: url(profile-cover.png);
+  background-size: cover;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  height: 160px;
+  position: relative;
+}
+
+.edit-buttons {
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+.profile-content {
+  align-items: center;
+  display: flex;
+  padding: 20px;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.profile-content h3 {
+  color: #0f172a;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.48px;
+}
+
+.profile-content p {
+  color: var(--gray-600);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.avatar-xxl {
+  border: 4px solid rgba(233, 236, 239, 0.4);
+  border-radius: 120px;
+  height: 120px;
+  margin-right: 8px;
+  margin-top: -64px;
+  width: 120px;
+  position: relative;
+}
+
+.avatar-xxl::before {
+  content: "";
+  display: block;
+  height: 16px;
+  width: 16px;
+  background-color: var(--color-success, #20c877);
+  border: 1px solid #fff;
+  border-radius: 16px;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+[class*="avatar"] img {
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+}
+
+.row {
+  column-count: 2;
+  column-gap: 24px;
+
+  margin-top: 32px;
+}
+
+.card {
+  border-radius: 8px;
+  background: var(--theme-colors-white);
+  box-shadow: 0px 1px 2px 0px rgba(21, 30, 40, 0.08),
+    0px 2px 4px 0px rgba(13, 23, 33, 0.08);
+}
+
+.card + .card {
+  margin-top: 24px;
+}
+
+.card h3 {
+  flex-direction: column;
+  color: var(--gray-800, #1e293b);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--gray-200, #e2e8f0);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card-content ul li {
+  display: flex;
+  gap: 20px;
+}
+
+h4 {
+  margin: 0;
+}
+
+.first-part {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.second-part {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  gap: 30px;
+}
+
+.avatars {
+  display: flex;
+  align-items: center;
+}
+
+.avatars img {
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  border: 1px solid var(--theme-colors-white, #fff);
+}
+
+.avatars img:hover {
+  z-index: 10;
+}
+
+.avatars img + img {
+  margin-left: -12px;
+}
